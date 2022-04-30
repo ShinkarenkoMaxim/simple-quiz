@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Quiz Bot</title>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="author" content="Shinkarenko Max" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    Hello World
+    <div class="wrapper">
+      <div>
+        <p>Каково было первоначальное название Нью-Йорка?</span>
+        <div>
+          <input id="first" name="answer" type="radio" />
+          <label for="first">Новый Амстердам</label>
+        </div>
+        <div>
+          <input id="second" name="answer" type="radio" />
+          <label for="second">Большое яблоко</label>
+        </div>
+        <div>
+          <input id="third" name="answer" type="radio" />
+          <label for="third">Имперский штат</label>
+        </div>
+        <div>
+          <input id="fourth" name="answer" type="radio" />
+          <label for="fourth">Готэм</label>
+        </div>
+      </div>
+      <div>
+        <button class="btn">Отправить ответ</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
   </body>
 </html>
