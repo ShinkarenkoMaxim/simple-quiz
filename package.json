@@ -2,5 +2,22 @@
   "name": "simple-quiz",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1"
+  },
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "serve": "nodemon dist/index.js",
+    "build": "tsc --skipLibCheck",
+    "watch": "tsc -w --skipLibCheck"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.30",
+    "nodemon": "^2.0.16",
+    "rimraf": "^3.0.2"
+  }
 }
