@@ -1,17 +1,20 @@
+import 'dotenv/config';
 import { Bot } from 'grammy';
 import { run, sequentialize } from '@grammyjs/runner';
 import { apiThrottler } from '@grammyjs/transformer-throttler';
 
 import { getSessionKey, initial, session } from './session';
 import { Context } from './context';
+import handlers from './handlers';
 
 const bot = new Bot<Context>(process.env.BOT_TOKEN);
-
 const throttler = apiThrottler();
+
 bot.api.config.use(throttler);
 
 bot.use(sequentialize(getSessionKey));
 bot.use(session);
+bot.use(handlers);
 
 // Start bot with polling by default and Sequentialize runner
 const runner = run(bot);
