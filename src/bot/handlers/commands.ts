@@ -16,7 +16,7 @@ composer.command(['start', 'help'], async (ctx) => {
 
 composer.command('simple', async (ctx) => {
   const keyboard = new Keyboard().webApp(
-    '💫 Тык!',
+    '💫 Tap!',
     APP_BASE_URL + 'index.html'
   );
 
@@ -30,7 +30,7 @@ composer.command('simple', async (ctx) => {
 
 composer.command('inline', async (ctx) => {
   const keyboard = new InlineKeyboard().webApp(
-    '💫 Тык!',
+    '💫 Tap!',
     APP_BASE_URL + 'index.html'
   );
 
