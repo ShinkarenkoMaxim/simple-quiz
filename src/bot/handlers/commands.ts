@@ -7,7 +7,7 @@ const composer = new Composer<Context>();
 
 composer.command(['start', 'help'], async (ctx) => {
   const msg =
-    'Все доступные режимы:\n\n/simple - простой режим\n/inline - в инлайн клавиатуре';
+    'All available modes:\n\n/simple - simple mode with usual keyboard\n/inline - inline button mode';
 
   await ctx.reply(msg, {
     parse_mode: 'HTML',
@@ -20,7 +20,7 @@ composer.command('simple', async (ctx) => {
     APP_BASE_URL + 'index.html'
   );
 
-  await ctx.reply('Простой режим', {
+  await ctx.reply('Simple mode', {
     reply_markup: {
       keyboard: keyboard.build(),
       resize_keyboard: true,
@@ -34,7 +34,7 @@ composer.command('inline', async (ctx) => {
     APP_BASE_URL + 'index.html'
   );
 
-  await ctx.reply('Inline режим', {
+  await ctx.reply('Inline mode', {
     reply_markup: keyboard,
   });
 });
