@@ -3,36 +3,32 @@
   <head>
     <title>Quiz Bot</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="author" content="Shinkarenko Max" />
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
   </head>
   <body>
-    <div class="wrapper">
-      <div>
-        <p>Каково было первоначальное название Нью-Йорка?</span>
+    <div class="container mx-auto tg-height flex justify-center items-center w-full max-w-xs px-6">
+      <div class="w-full">
         <div>
-          <input id="first" name="answer" type="radio" />
-          <label for="first">Новый Амстердам</label>
+          <span id="progress-text" class="text-base text-blue-600"></span>
+          <div id="progressbar" class="w-9/12 border-0 rounded-full h-2 bg-slate-200">
+            <div id="progressbar-full" class="h-full rounded-full bg-blue-600"></div>
+          </div>
         </div>
-        <div>
-          <input id="second" name="answer" type="radio" />
-          <label for="second">Большое яблоко</label>
+        <div class="flex justify-center">
+          <div id="content-section">
+            <p class="text-base leading-relaxed mt-0 mb-4 text-gray-800" id="question"></span>
+            <div id="answers" class="disabled:opacity-5 opacity-1" onchange="changeAnswer()"></div>
+          </div>
         </div>
-        <div>
-          <input id="third" name="answer" type="radio" />
-          <label for="third">Имперский штат</label>
+        <div class="flex space-x-2 justify-center">
+          <button class="btn w-1/2 h-10" id="sendanswer">ответить</button>
         </div>
-        <div>
-          <input id="fourth" name="answer" type="radio" />
-          <label for="fourth">Готэм</label>
-        </div>
-      </div>
-      <div>
-        <button class="btn">Отправить ответ</button>
       </div>
     </div>
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>

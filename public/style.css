@@ -1,7 +1,13 @@
-.wrapper {
+/* .wrapper {
   height: 100%;
   width: 100%;
-  max-width: 768px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+.tg-height {
+  height: var(--tg-viewport-stable-height, 100vh);
+  transition: height 0.35s linear;
 }
 
 .btn {
@@ -10,8 +16,6 @@
   -ms-user-select: none;
   user-select: none;
   position: relative;
-  width: 100%;
-  height: 50px;
   margin: 10px 0;
   border-radius: 8px;
   color: #ffffff;
@@ -30,4 +34,15 @@
   transform: translateY(-3%);
   -webkit-box-shadow: 0 4px 8px rgba(255, 255, 255, 0.08);
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.08);
+}
+
+.btn:disabled,
+.btn[disabled] {
+  background-color: rgb(229, 229, 229);
+  color: rgb(175, 175, 175);
+}
+
+#progressbar-full {
+  width: 0%;
+  transition: width 0.55s linear;
 }
