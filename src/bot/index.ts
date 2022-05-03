@@ -3,7 +3,7 @@ import { Bot } from 'grammy';
 import { run, sequentialize } from '@grammyjs/runner';
 import { apiThrottler } from '@grammyjs/transformer-throttler';
 
-import { getSessionKey, initial, session } from './session';
+import { getSessionKey, session } from './session';
 import { Context } from './context';
 import handlers from './handlers';
 

@@ -54,11 +54,6 @@
     tslib "^2.3.1"
     webcrypto-core "^1.7.2"
 
-"@satont/grammy-redis-storage@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@satont/grammy-redis-storage/-/grammy-redis-storage-1.2.0.tgz#f7c185b174b5cba69e4aec3e78755a4b447c7e22"
-  integrity sha512-hxmmBZeHiy5rEv9xBO907Bv7wIhvM/EnH1Cj0QWJ//YVBEw6fs03uW97lmsmIfvX72TybtfBDC6C09Gcm0EyYQ==
-
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
