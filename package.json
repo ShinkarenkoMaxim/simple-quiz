@@ -1,6 +1,8 @@
 {
   "name": "simple-quiz",
   "version": "1.0.0",
+  "author": "Shinkarenko Maxim",
+  "description": "Telegram webapp example",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
