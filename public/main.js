@@ -1,8 +1,10 @@
 // Setup tailwind config
 tailwind.config = {
+  darkMode: 'class',
   variants: {
     extend: {
       opacity: ['disabled'],
+      textColor: ['dark'],
     },
   },
 };
@@ -99,8 +101,11 @@ const getNewQuestion = () => {
       'h-4',
       'w-4',
       'border',
+      'dark:border-white',
       'border-gray-300',
       'bg-white',
+      'dark:checked:bg-blue-500',
+      'dark:checked:border-blue-500',
       'checked:bg-blue-600',
       'checked:border-blue-600',
       'focus:outline-none',
@@ -119,7 +124,7 @@ const getNewQuestion = () => {
     const label = document.createElement('label');
     label.htmlFor = answerId;
     label.innerText = answer;
-    label.classList.add('inline-block', 'text-gray-800');
+    label.classList.add('inline-block', 'dark:text-white', 'text-gray-800');
 
     itemContainer.appendChild(input);
     itemContainer.appendChild(label);

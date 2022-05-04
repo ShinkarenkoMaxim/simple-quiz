@@ -7,20 +7,26 @@
     <meta name="author" content="Shinkarenko Max" />
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script><script>
+      function setThemeClass() {
+        document.documentElement.className = Telegram.WebApp.colorScheme;
+      }
+      Telegram.WebApp.onEvent('themeChanged', setThemeClass);
+      setThemeClass();
+    </script>
   </head>
   <body>
     <div class="container mx-auto tg-height flex justify-center items-center w-full max-w-xs px-6">
       <div class="w-full">
         <div>
-          <span id="progress-text" class="text-base text-blue-600"></span>
+          <span id="progress-text" class="text-base dark:text-blue-500 text-blue-600"></span>
           <div id="progressbar" class="w-9/12 border-0 rounded-full h-2 bg-slate-200">
-            <div id="progressbar-full" class="h-full rounded-full bg-blue-600"></div>
+            <div id="progressbar-full" class="h-full rounded-full dark:bg-blue-500 bg-blue-600"></div>
           </div>
         </div>
         <div class="flex justify-center">
           <div id="content-section">
-            <p class="text-base leading-relaxed mt-0 mb-4 text-gray-800" id="question"></span>
+            <p class="text-base leading-relaxed mt-0 mb-4 dark:text-white text-gray-800" id="question"></span>
             <div id="answers" class="disabled:opacity-5 opacity-1" onchange="changeAnswer()"></div>
           </div>
         </div>

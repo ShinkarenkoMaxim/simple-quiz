@@ -16,6 +16,7 @@ For UI use `Tailwind`. The Frontend part it's not optimized, just shows the poss
 - [Keyboard Button](https://core.telegram.org/bots/webapps#keyboard-button-web-apps) use to additional Bot UI, because user data is [not passed](https://github.com/ShinkarenkoMaxim/simple-quiz/blob/main/public/main.js#L132)
 - [Inline Button](https://core.telegram.org/bots/webapps#inline-button-web-apps) use to handle **user data** like language and user id. It's useful for more loaded components like forms
 - It is advisable not to use `JQuery` and build the project with `Webpack` or any other builder for optimization
+- Be sure to use dark and light themes.
 
 ## Installation and local launch in DEVELOPMENT mode
 
