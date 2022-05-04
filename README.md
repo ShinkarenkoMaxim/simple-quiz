@@ -24,7 +24,7 @@ For UI use `Tailwind`. The Frontend part it's not optimized, just shows the poss
 2. Create `.env` file with the environment variables listed below
 3. Run `yarn` in the root folder
 4. Run `yarn build`
-5. Run `yarn serve` and `node dist/bot/index.js` separately
+5. Run `yarn serve` and `yarn bot` separately
 
 ## Environment variables in `.env` file
 

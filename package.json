@@ -18,6 +18,7 @@
   "scripts": {
     "clean": "rimraf dist/*",
     "serve": "nodemon dist/index.js",
+    "bot": "node dist/bot/index.js",
     "build": "tsc --skipLibCheck",
     "watch": "tsc -w --skipLibCheck"
   },
