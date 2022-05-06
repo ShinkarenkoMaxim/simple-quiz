@@ -3,6 +3,7 @@ import { Context } from '../context';
 
 const composer = new Composer<Context>();
 
+// Handle data from frontend
 composer.on(':web_app_data', (ctx) => {
   const data = ctx.message.web_app_data.data;
   return ctx.reply(data);

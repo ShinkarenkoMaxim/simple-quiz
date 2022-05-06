@@ -3,7 +3,7 @@ import { Bot } from 'grammy';
 import express, { urlencoded } from 'express';
 import bodyParser from 'body-parser';
 
-import { transformInitData, validate } from './tgHelper';
+import { transformInitData, validate } from './tgAuthHelper';
 
 const bot = new Bot(process.env.BOT_TOKEN);
 const app = express();
@@ -19,7 +19,7 @@ app.post('/api/sendAnswer', async (req, res) => {
   // If has not auth data - send Bad Request
   let initData = data._auth;
   if (!initData) {
-    res.sendStatus(400);
+    res.sendStatus(400).end();
     return;
   }
 
@@ -27,10 +27,7 @@ app.post('/api/sendAnswer', async (req, res) => {
   initData = transformInitData(initData);
   const isValid = await validate(initData, process.env.BOT_TOKEN);
   if (!isValid) {
-    res.status(403).send({
-      success: false,
-      message: 'Forbidden',
-    });
+    res.status(403).end();
     return;
   }
 
@@ -44,10 +41,7 @@ app.post('/api/sendAnswer', async (req, res) => {
     },
   });
 
-  res.status(200).send({
-    success: true,
-    message: 'OK!',
-  });
+  res.status(200).end();
 });
 
 app.listen(process.env.PORT, () => {

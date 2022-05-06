@@ -3,6 +3,9 @@ import { Composer, InlineKeyboard, Keyboard } from 'grammy';
 import { APP_BASE_URL } from '../constants';
 import { Context } from '../context';
 
+const magicButton = (keyboard: any): Keyboard | InlineKeyboard =>
+  new keyboard().webApp('💫 Tap!', APP_BASE_URL + 'index.html');
+
 const composer = new Composer<Context>();
 
 composer.command(['start', 'help'], async (ctx) => {
@@ -15,10 +18,7 @@ composer.command(['start', 'help'], async (ctx) => {
 });
 
 composer.command('simple', async (ctx) => {
-  const keyboard = new Keyboard().webApp(
-    '💫 Tap!',
-    APP_BASE_URL + 'index.html'
-  );
+  const keyboard = magicButton(Keyboard) as Keyboard;
 
   await ctx.reply('Simple mode', {
     reply_markup: {
@@ -29,10 +29,7 @@ composer.command('simple', async (ctx) => {
 });
 
 composer.command('inline', async (ctx) => {
-  const keyboard = new InlineKeyboard().webApp(
-    '💫 Tap!',
-    APP_BASE_URL + 'index.html'
-  );
+  const keyboard = magicButton(InlineKeyboard);
 
   await ctx.reply('Inline mode', {
     reply_markup: keyboard,
