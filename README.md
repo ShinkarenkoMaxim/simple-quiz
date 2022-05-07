@@ -13,7 +13,7 @@ This bot demonstrates how to develop Telegram bots with [WebApp feature](https:/
 
 ## What is important?
 
-- [Keyboard Button](https://core.telegram.org/bots/webapps#keyboard-button-web-apps) use to additional Bot UI, because user data is [not passed](https://github.com/ShinkarenkoMaxim/simple-quiz/blob/main/public/main.js#L132)
+- [Keyboard Button](https://core.telegram.org/bots/webapps#keyboard-button-web-apps) use to additional Bot UI, because user data is [not passed](https://github.com/ShinkarenkoMaxim/simple-quiz/blob/main/public/example/main.js#L132)
 - [Inline Button](https://core.telegram.org/bots/webapps#inline-button-web-apps) use to handle **user data** like language and user id. It's useful for more loaded components like forms
 - It is advisable not to use `JQuery` and build the project with ``Vite``, ``Parcel`` or other modern bundlers.
 - Be sure to use dark and light themes.
